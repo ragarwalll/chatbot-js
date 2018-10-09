@@ -20,6 +20,12 @@ var output = (input) => {
         var botInsert= "";
         var botAns = (input.toLowerCase()).replace(/[^\w\s\d]/gi,"");
         botAns = botAns.replace(/ a /g," ");
+        try{
+            botAns = replaceses(botAns);
+        }
+        catch(e){
+            botAns = botAns;
+        }
         //Interaction
         if(getReply(userInput, botReply, botAns)){
             var botAns = getReply(userInput, botReply, botAns);
